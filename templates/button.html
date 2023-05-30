@@ -1,0 +1,19 @@
+<!-- index.html -->
+{% extends 'base.html' %}
+
+{% load static %} <!-- 내가 추가 -->
+{% load bootstrap5 %} <!-- 내가 추가 -->
+{% bootstrap_css %}  <!-- 내가 추가 -->
+{% bootstrap_javascript %}  <!-- 내가 추가 -->
+
+{% block title %}My Home Page{% endblock %}
+
+{% block extrahead %}
+  <link rel="stylesheet" href="{% static 'css/index.css' %}"> # extrahead를 통해 추가로 링크 삽입 가능
+
+{% endblock %}
+
+{% block content %}
+    <button>Bootstrap5 미적용 버튼</button>
+    <button class="btn btn-primary">Bootstrap5 적용 버튼</button>
+{% endblock %}
